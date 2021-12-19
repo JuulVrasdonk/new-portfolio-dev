@@ -1,0 +1,93 @@
+header h1 
+    margin-top: 95px
+    margin-bottom: 25px
+    font-size: $heading
+
+header div > p
+    margin-bottom: 96px
+
+header ul
+    display: flex
+    width: 76%
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 44px
+
+    li
+        width: 45%
+        
+    li:nth-of-type(2), li:nth-of-type(4)
+        margin-right: 0
+        margin-left: 0
+
+    li:first-of-type, li:nth-of-type(2)
+        margin-bottom: 32px
+    
+main 
+    margin: 0 2.9%
+
+    .pdf-file
+        font-family: AndersonGroteskUltrabold
+
+    .divider
+        height: 1px
+        width: 50px
+        background-color: white
+
+    div:first-of-type
+        margin-bottom: 11px
+
+    div:nth-of-type(2)
+        margin-top: 11px
+        margin-bottom: 75px
+
+    div:last-of-type 
+        position: relative
+        height: 2em
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 50vh 0 25vh 0 
+        
+        a 
+            padding: 7.5em
+
+            span
+                white-space: nowrap
+
+
+    
+@media (min-width: $tablet)  
+    h1, header div > p, header ul, main .divider, main > a:first-of-type
+        margin-left: 10.7vw
+
+    header div > p
+        width: 60%
+
+    main
+        margin: 0
+
+@media (min-width: $desktop)  
+    header > div
+        display: flex
+        height: 80vh
+        align-items: center
+
+        div
+            width: 55%
+
+        ul
+            margin: 0
+            padding-top: 130px
+            width: 40%
+            height: 40%
+            
+            li
+                width: 50%
+
+
+            li:first-of-type, li:nth-of-type(2)
+                margin-bottom: 0
+
+    main > div:first-of-type
+        margin-top: 75px

@@ -1,0 +1,110 @@
+footer > div:first-of-type
+        margin-top: 219px
+
+footer
+    margin: 0 2.9%  
+
+    a
+        height: 50%
+
+    a h2
+        font-size: clamp(21.9px, 3.91vw, 72px)
+        width: 4.6em
+        margin-bottom: 38px
+
+    ul:first-of-type
+        display: flex
+        width: 70%
+        flex-wrap: wrap
+        justify-content: space-between
+
+        li
+            width: 6.9em
+        
+        li:nth-of-type(2), li:nth-of-type(4)
+            text-align: end
+
+        li:first-of-type, li:nth-of-type(2)
+            margin-bottom: 32px
+    
+    ul:last-of-type
+        display: flex
+        margin-top: 38px    
+        margin-bottom: 199px
+        
+        li
+            margin-right: 43px  
+
+        svg
+            width: clamp(20px, 4vw, 30px)
+            height: clamp(20px, 4vw, 30px)
+
+
+footer > div:last-of-type
+    display: flex
+    justify-content: space-between
+    margin-bottom: 2.9%
+    align-items: flex-end
+    position: relative
+    z-index: 101
+
+    p
+        width: 7em
+        font-size: $navtext
+
+    p:last-of-type
+        text-align: end
+
+.text-me-box
+    position: relative
+
+.copy-message-style
+    position: absolute
+    right: -45px
+    font-size: $extra
+    font-family: AndersonGrotesk
+    width: 100%
+    animation: message-fade 3s cubic-bezier(0.250, 0.250, 0.750, 0.750) 
+    transform: translateY(-30px)
+    opacity: 0
+    mix-blend-mode: normal
+
+@keyframes message-fade
+    0%
+        opacity: 0
+        transform: translateY(0px)
+
+    20%
+        opacity: 1
+        transform: translateY(-30px)
+
+    80%
+        opacity: 1
+    100%
+        opacity: 0
+    
+@media (min-width: $tablet) 
+    footer
+        padding-top: 234px
+    footer > div:first-of-type
+            display: flex
+            margin: 0px 10.7% 0 10.7%
+
+            div 
+                display: flex
+                flex-direction: column
+                margin-left: 20%
+            
+            ul:first-of-type 
+                width: 100%
+                max-width: 23em
+
+            ul:last-of-type
+                margin-bottom: 158px
+                margin-top: 100px
+
+@media (min-width: $desktop)         
+    footer 
+        padding-top: 241px 
+
+    

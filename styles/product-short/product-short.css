@@ -1,0 +1,689 @@
+@font-face {
+  font-family: AndersonGrotesk;
+  src: url(../../font/AndersonGrotesk.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AndersonGroteskOblique;
+  src: url(../../font/AndersonGrotesk-Oblique.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AndersonGroteskLight;
+  src: url(../../font/AndersonGrotesk-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: AndersonGroteskLightOblique;
+  src: url(../../font/AndersonGrotesk-LightOblique.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: AndersonGroteskBold;
+  src: url(../../font/AndersonGrotesk-Bold.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: AndersonGroteskBoldOblique;
+  src: url(../../font/AndersonGrotesk-BoldOblique.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: AndersonGroteskUltrabold;
+  src: url(../../font/AndersonGrotesk-Ultrabold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: AndersonGroteskUltraboldOblique;
+  src: url(../../font/AndersonGrotesk-UltraboldOblique.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: AndersonGroteskBlack;
+  src: url(../../font/AndersonGrotesk-Black.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: AndersonGroteskBlackOblique;
+  src: url(../../font/AndersonGrotesk-BlackOblique.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: AndersonGrotesk;
+  src: url(../../font/AndersonGrotesk.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AndersonGroteskOblique;
+  src: url(../../font/AndersonGrotesk-Oblique.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AndersonGroteskLight;
+  src: url(../../font/AndersonGrotesk-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: AndersonGroteskLightOblique;
+  src: url(../../font/AndersonGrotesk-LightOblique.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: AndersonGroteskBold;
+  src: url(../../font/AndersonGrotesk-Bold.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: AndersonGroteskBoldOblique;
+  src: url(../../font/AndersonGrotesk-BoldOblique.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: AndersonGroteskUltrabold;
+  src: url(../../font/AndersonGrotesk-Ultrabold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: AndersonGroteskUltraboldOblique;
+  src: url(../../font/AndersonGrotesk-UltraboldOblique.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: AndersonGroteskBlack;
+  src: url(../../font/AndersonGrotesk-Black.otf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: AndersonGroteskBlackOblique;
+  src: url(../../font/AndersonGrotesk-BlackOblique.otf);
+  font-weight: 900;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
+body {
+  background-color: #121212;
+  height: auto;
+  overflow-x: hidden;
+}
+
+p, a, span, li, button {
+  color: #ffffff;
+  mix-blend-mode: difference;
+  text-decoration: none;
+  font-family: AndersonGrotesk;
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+h1, h2, h3, h4, strong, .wrapping-paper {
+  font-family: AndersonGroteskUltrabold;
+  color: #ffffff;
+  mix-blend-mode: difference;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.cursor {
+  display: none;
+}
+
+.placeholder-img {
+  position: fixed;
+  width: 20vw;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.gradient-overlay {
+  height: 15vh;
+}
+
+.gradient-overlay {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 23vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 22, 26, 0)), to(#14161a));
+  background-image: linear-gradient(180deg, rgba(20, 22, 26, 0), #14161a);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.wrapping-paper {
+  display: inline-block;
+  line-height: .8;
+}
+
+div.pageTransition {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100vw;
+  height: 0;
+  background-color: white;
+}
+
+@media (min-width: 576px) {
+  .tablet-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-hidden {
+    display: none;
+  }
+  .tablet-hidden {
+    display: block;
+  }
+  .link {
+    position: relative;
+  }
+  .link span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.15s linear;
+    transition: -webkit-transform 0.15s linear;
+    transition: transform 0.15s linear;
+    transition: transform 0.15s linear, -webkit-transform 0.15s linear;
+  }
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    display: block;
+  }
+  .cursoricon {
+    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-animation: cursoranim 4s infinite;
+            animation: cursoranim 4s infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  .fade {
+    -webkit-transition: .1s;
+    transition: .1s;
+  }
+  .cursorborder, .cursordot {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  .cursor-text {
+    position: relative;
+    bottom: 27px;
+    left: 45px;
+    min-width: 12em;
+    font-size: clamp(10px, 1.79vw, 16px);
+    color: transparent;
+  }
+  .invisible {
+    opacity: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .clickable {
+    -webkit-animation: cursorborderanim .5s;
+            animation: cursorborderanim .5s;
+  }
+  .cursordot {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
+  }
+  .clickabledot {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
+            transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 2);
+  }
+  .text-fade-in {
+    color: #ffffff;
+    -webkit-transition: 2s;
+    transition: 2s;
+  }
+  .wrapping-paper {
+    line-height: 1;
+  }
+  @-webkit-keyframes cursoranim {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes cursoranim {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes cursorborderanim {
+    0% {
+      -webkit-transform: rotate(0deg) scale(1);
+              transform: rotate(0deg) scale(1);
+    }
+    50% {
+      -webkit-transform: rotate(180deg) scale(0.5);
+              transform: rotate(180deg) scale(0.5);
+    }
+    100% {
+      -webkit-transform: rotate(360deg) scale(1);
+              transform: rotate(360deg) scale(1);
+    }
+  }
+  @keyframes cursorborderanim {
+    0% {
+      -webkit-transform: rotate(0deg) scale(1);
+              transform: rotate(0deg) scale(1);
+    }
+    50% {
+      -webkit-transform: rotate(180deg) scale(0.5);
+              transform: rotate(180deg) scale(0.5);
+    }
+    100% {
+      -webkit-transform: rotate(360deg) scale(1);
+              transform: rotate(360deg) scale(1);
+    }
+  }
+}
+
+header {
+  margin: 2.9%;
+  margin-bottom: 0;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav a span {
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+header nav a:first-of-type {
+  width: 4.5em;
+}
+
+header nav a:first-of-type span {
+  font-family: AndersonGroteskUltraBold;
+}
+
+@media (min-width: 576px) {
+  header {
+    margin: 0;
+  }
+  header nav {
+    margin: 1.1%;
+  }
+}
+
+footer > div:first-of-type {
+  margin-top: 219px;
+}
+
+footer {
+  margin: 0 2.9%;
+}
+
+footer a {
+  height: 50%;
+}
+
+footer a h2 {
+  font-size: clamp(21.9px, 3.91vw, 72px);
+  width: 4.6em;
+  margin-bottom: 38px;
+}
+
+footer ul:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer ul:first-of-type li {
+  width: 6.9em;
+}
+
+footer ul:first-of-type li:nth-of-type(2), footer ul:first-of-type li:nth-of-type(4) {
+  text-align: end;
+}
+
+footer ul:first-of-type li:first-of-type, footer ul:first-of-type li:nth-of-type(2) {
+  margin-bottom: 32px;
+}
+
+footer ul:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 38px;
+  margin-bottom: 199px;
+}
+
+footer ul:last-of-type li {
+  margin-right: 43px;
+}
+
+footer ul:last-of-type svg {
+  width: clamp(20px, 4vw, 30px);
+  height: clamp(20px, 4vw, 30px);
+}
+
+footer > div:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.9%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  z-index: 101;
+}
+
+footer > div:last-of-type p {
+  width: 7em;
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+footer > div:last-of-type p:last-of-type {
+  text-align: end;
+}
+
+.text-me-box {
+  position: relative;
+}
+
+.copy-message-style {
+  position: absolute;
+  right: -45px;
+  font-size: clamp(10px, 1.79vw, 16px);
+  font-family: AndersonGrotesk;
+  width: 100%;
+  -webkit-animation: message-fade 3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+          animation: message-fade 3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  opacity: 0;
+  mix-blend-mode: normal;
+}
+
+@-webkit-keyframes message-fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes message-fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  footer {
+    padding-top: 234px;
+  }
+  footer > div:first-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px 10.7% 0 10.7%;
+  }
+  footer > div:first-of-type div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 20%;
+  }
+  footer > div:first-of-type ul:first-of-type {
+    width: 100%;
+    max-width: 23em;
+  }
+  footer > div:first-of-type ul:last-of-type {
+    margin-bottom: 158px;
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    padding-top: 241px;
+  }
+}
+
+header h1 {
+  margin-top: 95px;
+  margin-bottom: 25px;
+  font-size: clamp(56px, 8vw, 100px);
+}
+
+header div > p {
+  margin-bottom: 96px;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 76%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+header ul li {
+  width: 45%;
+}
+
+header ul li:nth-of-type(2), header ul li:nth-of-type(4) {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+header ul li:first-of-type, header ul li:nth-of-type(2) {
+  margin-bottom: 32px;
+}
+
+main {
+  margin: 0 2.9%;
+}
+
+main .pdf-file {
+  font-family: AndersonGroteskUltrabold;
+}
+
+main .divider {
+  height: 1px;
+  width: 50px;
+  background-color: white;
+}
+
+main div:first-of-type {
+  margin-bottom: 11px;
+}
+
+main div:nth-of-type(2) {
+  margin-top: 11px;
+  margin-bottom: 75px;
+}
+
+main div:last-of-type {
+  position: relative;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50vh 0 25vh 0;
+}
+
+main div:last-of-type a {
+  padding: 7.5em;
+}
+
+main div:last-of-type a span {
+  white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+  h1, header div > p, header ul, main .divider, main > a:first-of-type {
+    margin-left: 10.7vw;
+  }
+  header div > p {
+    width: 60%;
+  }
+  main {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header > div div {
+    width: 55%;
+  }
+  header > div ul {
+    margin: 0;
+    padding-top: 130px;
+    width: 40%;
+    height: 40%;
+  }
+  header > div ul li {
+    width: 50%;
+  }
+  header > div ul li:first-of-type, header > div ul li:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+  main > div:first-of-type {
+    margin-top: 75px;
+  }
+}
+/*# sourceMappingURL=product-short.css.map */

@@ -1,0 +1,162 @@
+h1
+    margin-top: 95px
+    max-width: 90vw
+    word-spacing: clamp(.2em, 1vw, 1em)
+    font-weight: 700
+    overflow: hidden
+    position: relative
+    z-index: 3
+    pointer-events: none
+
+    span
+        font-size: $heading
+        
+
+        
+header > div
+    display: flex
+    align-items: center
+    margin: 33px 0 53px 5px
+
+    p
+        font-size: 18px
+        margin-left: 9px
+        padding-top: 3px
+picture 
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 11px
+
+    img
+        width: 94.1%
+
+article:first-of-type 
+    margin-bottom: 91px
+article:first-of-type > a
+        margin-left: 2.9%
+
+#sel-work
+    margin-left: 2.9%
+    position: relative
+    z-index: 3
+    
+
+    h2
+        margin-bottom: 76px
+        word-spacing: clamp(.2em, 1vw, 1em)
+
+        span
+            font-size: $heading
+
+#sel-work > ul > li
+    margin-bottom: 61px
+
+    h3
+        word-spacing: clamp(.2em, 1vw, 1em)
+
+        span
+            font-size: $subheading
+    
+    ul 
+        display: flex
+        margin-top: 3px
+        margin-bottom: 10px
+
+        .divider
+            width: 1px
+            height: $extra
+            background-color: white
+            margin-left: clamp(10px, 2.7vw, 19px)
+            margin-right: clamp(10px, 2.7vw, 19px)
+
+        li p
+            font-size: $extra
+            
+#sel-work > ul > li > a > p 
+    width: 24em
+    max-width: 90vw
+    font-size: $text
+
+#sel-work > ul > li > a > button
+    margin-top: 1em
+    float: right
+    margin-right: 2.9%
+
+
+.scroll-cta-animated
+    animation: rec-circle 3s infinite cubic-bezier(0.075, 0.820, 0.165, 1.000)
+
+.scroll-cta-background
+    fill: white
+    opacity: .3
+
+@keyframes rec-circle
+    0% 
+        height: 33%
+        opacity: 1
+
+    50%
+        height: 100%
+        transform: translateY(0px)
+        
+
+    100%
+        height: 10px
+        transform: translateY(70px)
+        opacity: 1
+
+
+@media (min-width: $tablet) 
+
+    h1 
+        margin-left: 10.7%
+        max-width: 80%
+        line-height: .8em
+        span 
+            font-size: 100px
+
+    header div
+        display: flex
+        justify-content: center
+        margin: 0
+        width: 10.7vw
+        position: relative
+        top: 250px
+
+    picture img
+        width: 78.6vw
+
+    article:first-of-type > a
+        margin-left: 10.7%
+
+    #sel-work
+        margin-left: 10.7%
+
+    #sel-work > ul > li > a > p 
+        max-width: none
+        width: 60%
+    
+@media (min-width: $desktop)
+    header > h1
+            max-width: 70%
+
+    article:first-of-type 
+        margin-bottom: 333px
+
+
+    #sel-work h2
+        width: 4.5em
+        margin-bottom: 256px
+
+    #sel-work > ul > li
+        margin-bottom: 0px
+
+    #sel-work > ul > li > a > p:last-of-type
+        padding-bottom: 92.5px
+
+    #sel-work > ul > li > a > h3
+        padding-top: 92.5px
+
+    #sel-work > ul > li > a > p 
+        width: 40%

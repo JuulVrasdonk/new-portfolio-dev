@@ -1,0 +1,211 @@
+header div h1 
+    margin-top: 95px
+    margin-bottom: 25px
+    font-size: $heading
+
+header > div div p
+    margin-bottom: 96px
+    width: 95%
+    
+    span:first-of-type
+        color: #CFCFCF
+
+    span:nth-of-type(2)
+        color: #515151
+
+    span:last-of-type
+        color: #383838
+
+header ul
+        display: flex
+        width: 76%
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 44px
+
+        li
+            width: 50%
+        
+        li:nth-of-type(2), li:nth-of-type(4)
+            margin-right: 0
+            margin-left: 0
+
+        li:first-of-type, li:nth-of-type(2)
+            margin-bottom: 32px
+
+        li:nth-of-type(2) p 
+            font-size: clamp(12.5px, 2.5vw, 18px)
+
+
+header > .divider
+    height: 1px
+    width: 50px
+    background-color: white
+    margin-bottom: 106px
+
+main section > ul
+    overflow: hidden
+
+    li ul
+        display: flex
+        margin-bottom: 14px
+    
+        li img 
+            height: 156px
+            margin: 0 7px
+
+main section > ul > li:last-of-type > ul
+    margin-bottom: 73px
+
+main section article > h2
+    margin-left: 2.9%
+    width: 8.5em
+    margin-bottom: 17px
+    font-size: $textheading
+
+main section article > p 
+    margin-left: 2.9%
+    width: 80%
+
+
+main section:nth-of-type(2) 
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 158px
+
+main section:nth-of-type(2) .responsive-anim
+    width: 80%  
+    margin-bottom: 66px
+
+
+main 
+    .divider
+        height: 1px
+        width: 50px
+        margin-top: 156px
+        background-color: white
+        margin-left: 2.9%
+
+    div:first-of-type
+        margin-bottom: 11px
+
+    div:nth-of-type(2)
+        margin-top: 11px
+        margin-bottom: 75px
+
+    .pdf-file
+        margin-left: 2.9%
+
+    div:last-of-type 
+        position: relative
+        height: 2em
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 50vh 0 25vh 0 
+        
+        a 
+            padding: 7.5em
+
+            span
+                white-space: nowrap
+
+@media (min-width: $tablet)  
+    h1, header > div div p, header ul, header main .divider, main > a:first-of-type, main > .divider
+        margin-left: 10.7vw
+
+    header > div div p
+        width: 60%
+        
+    header > div:last-of-type
+        opacity: 0
+
+    main
+        margin: 0
+
+    main section > ul li img 
+        height: 274px
+        margin: 0 7px
+    
+    main section article > p 
+        margin-left: 2.9%
+        width: 60%
+
+
+@media (min-width: $desktop)    
+    header
+        height: 100vh  
+
+    header > div:first-of-type
+        display: flex
+        height: 80vh
+        align-items: center
+
+        div
+            width: 55%
+
+        ul
+            margin: 0
+            padding-top: 130px
+            width: 40%
+            height: 40%
+            
+            li
+                width: 50%
+
+
+            li:first-of-type, li:nth-of-type(2)
+                margin-bottom: 0
+
+
+    main section
+        display: flex
+        flex-direction: row-reverse
+        width: 100vw
+
+        article
+            display: flex
+            justify-content: center
+            flex-direction: column
+            width: 45%
+            padding-left: 10.7vw
+
+            h2
+                margin-left: 0
+                font-size: clamp(28px, 5.71vw, 48px)
+
+            p
+                margin-left: 0
+                width: 70%
+
+        ul
+            position: relative
+            z-index: -1
+            right: 50px
+            width: 55%
+
+    main section:nth-of-type(2) 
+            flex-direction: row-reverse 
+            align-items: center
+            margin-bottom: 290px
+
+            article
+                width: 60%
+                
+                p
+                    width: 60%
+
+            .responsive-anim
+                width: 30%
+                margin-right: 10.7vw
+                margin-bottom: 0
+
+    main section > ul li ul li img 
+        height: 224px
+        margin: 0 7px
+
+
+
+    
+                 
