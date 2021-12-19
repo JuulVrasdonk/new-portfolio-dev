@@ -2,7 +2,9 @@ export default function pageTransition() {
     window.onload = () => {
         const transitionElement = document.querySelector('.transition');
         const anchors = document.querySelectorAll('a');
-        // console.log(anchors);
+        
+
+        console.log(anchors);
         setTimeout(() => {
             transitionElement.classList.remove('is-active');
         }, 500);
@@ -14,9 +16,16 @@ export default function pageTransition() {
                 // console.log(anchor.href);
                 let target = anchor.href;
                 transitionElement.classList.add('is-active');
+
+                const transitionTl = gsap.timeline()
+                transitionTl.to("header, main, footer", {
+                    duration: .5,
+                    ease: "power4.out",
+                    opacity: 0
+                })
                 setTimeout(() => {
                     window.location.href = target; 
-                }, 500)
+                }, 900)
             });
         }
 

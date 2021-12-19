@@ -190,7 +190,7 @@ export default function mainChoreo() {
 
 
     let master = gsap.timeline({
-        delay: .8
+        delay: 2
     })
         .add(headingAnimation())
         .add(imageAnimation())

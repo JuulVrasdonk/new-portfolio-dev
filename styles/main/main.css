@@ -352,9 +352,10 @@ ul {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   background-color: white;
-  pointer-events: none;
-  -webkit-transition: .5s ease-out;
-  transition: .5s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
   -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
           transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transform-origin: bottom;
@@ -380,19 +381,25 @@ ul {
   z-index: 1000;
   background-color: white;
   pointer-events: none;
-  -webkit-transition: .5s ease-out;
-  transition: .5s ease-out;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
   -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
           transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 .transition-swipe-2.is-active {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
 }
 
 header {
