@@ -1,12 +1,20 @@
-import {textAnimation} from "../modules/text-animation.js";
-
 export default function mainChoreo() {
   
-    // H1
-    function headingAnimation() {
-        return textAnimation(document.querySelectorAll(".heading > .overflow-hidden > .wrapping-paper"))
-    }
     
+    function headingAnimation() {
+        let tl = gsap.timeline();
+        tl.from(".heading > .overflow-hidden > .wrapping-paper", {
+            duration: .8,
+            y: -120,
+            stagger: .2,
+            ease: "power4.out",
+            autoAlpha: 0,
+            opacity: 0,
+            scale: .9,
+            marker: true
+        })
+        return tl
+    }
 
     // About me image
 
@@ -181,9 +189,11 @@ export default function mainChoreo() {
 
 
 
-    let master = gsap.timeline()
+    let master = gsap.timeline({
+        delay: .8
+    })
         .add(headingAnimation())
-        .add(imageAnimation(), "+=1")
+        .add(imageAnimation())
         .add(scrollAnimation())
         .add(navAppearance(), "-=0.5")
         // .add(pinnedHeading())

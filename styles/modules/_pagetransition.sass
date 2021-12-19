@@ -6,16 +6,20 @@
     top: 0
     bottom: 0
     z-index: 1000
+    border-top-left-radius: 50%
+    border-top-right-radius: 50%
     background-color: white
     pointer-events: none
     transition: .5s ease-out
-    transition-timing-function: cubic-bezier(1.000, 0.000, 1.000, 1.000)
-    transform-origin: left
-    transform: scaleX(0)
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860)
+    transform-origin: bottom
+    transform: scaleY(0)
 
 
 .transition-swipe-1.is-active
-    transform: scaleX(1)
+    transform: scaleY(1)
+    border-top-left-radius: 0%
+    border-top-right-radius: 0%
 
 .transition-swipe-2
     width: 100%
@@ -28,10 +32,10 @@
     background-color: white
     pointer-events: none
     transition: .5s ease-out
-    transition-timing-function: cubic-bezier(1.000, 0.000, 1.000, 1.000)
-    transform-origin: right
-    transform: scaleX(0)
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860)
+    transform-origin: top
+    transform: scaleY(0)
 
 
 .transition-swipe-2.is-active
-    transform: scaleX(1)
+    transform: scaleY(1)

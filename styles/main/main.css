@@ -349,21 +349,25 @@ ul {
   top: 0;
   bottom: 0;
   z-index: 1000;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   background-color: white;
   pointer-events: none;
   -webkit-transition: .5s ease-out;
   transition: .5s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(1, 0, 1, 1);
-          transition-timing-function: cubic-bezier(1, 0, 1, 1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
 }
 
 .transition-swipe-1.is-active {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
 }
 
 .transition-swipe-2 {
@@ -378,17 +382,17 @@ ul {
   pointer-events: none;
   -webkit-transition: .5s ease-out;
   transition: .5s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(1, 0, 1, 1);
-          transition-timing-function: cubic-bezier(1, 0, 1, 1);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
 }
 
 .transition-swipe-2.is-active {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 header {
