@@ -1,7 +1,9 @@
 header h1 
     margin-top: 95px
     margin-bottom: 25px
-    font-size: $heading
+
+    span
+        font-size: $heading
 
 header div > p
     margin-bottom: 96px
@@ -28,20 +30,46 @@ main
 
     .pdf-file
         font-family: AndersonGroteskUltrabold
+        position: relative
 
-    .divider
-        height: 1px
-        width: 50px
-        background-color: white
+        .divider:first-of-type
+            height: 1px
+            width: 50px
+            background-color: white
+            position: absolute
+            top: -10px
+            transition: .5s
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-    div:first-of-type
+        .divider:last-of-type
+            height: 1px
+            width: 50px
+            background-color: white
+            position: absolute
+            bottom: -7px
+            transition: .5s
+            transition-delay: .1s
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+
+    .pdf-file:hover > .divider:first-of-type
+        width: 100px
+        transition: .5s
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+
+    .pdf-file:hover > .divider:last-of-type
+        width: 75px
+        transition: .5s
+        transition-delay: .1s
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+
+main > div:first-of-type
         margin-bottom: 11px
 
-    div:nth-of-type(2)
+main > div:nth-of-type(2)
         margin-top: 11px
         margin-bottom: 75px
 
-    div:last-of-type 
+main > div:last-of-type 
         position: relative
         height: 2em
         display: flex

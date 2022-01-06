@@ -1,7 +1,9 @@
 header div h1 
     margin-top: 95px
     margin-bottom: 25px
-    font-size: $heading
+
+    span
+     font-size: $heading
 
 header > div div p
     margin-bottom: 96px
@@ -43,7 +45,7 @@ header > .divider
     background-color: white
     margin-bottom: 106px
 
-main section > ul
+.iterational > ul
     overflow: hidden
 
     li ul
@@ -54,50 +56,76 @@ main section > ul
             height: 156px
             margin: 0 7px
 
-main section > ul > li:last-of-type > ul
-    margin-bottom: 73px
+.iterational ul li:first-of-type ul
+    transform: translateX(-250px)
+
+.iterational ul li:nth-of-type(2) ul
+    transform: translateX(100px)
+
+.iterational ul li:nth-of-type(3) ul
+    transform: translateX(-150px)
+
 
 main section article > h2
     margin-left: 2.9%
     width: 8.5em
     margin-bottom: 17px
-    font-size: $textheading
+
+    span
+        font-size: $textheading
 
 main section article > p 
     margin-left: 2.9%
     width: 80%
 
 
-main section:nth-of-type(2) 
+.multidevice
     display: flex
     flex-direction: column
     align-items: center
     margin-top: 158px
 
-main section:nth-of-type(2) .responsive-anim
+.multidevice .responsive-anim
     width: 80%  
     margin-bottom: 66px
 
+.pdf-file
+    font-family: AndersonGroteskUltrabold
+    position: relative
+    margin-top: 300px
 
-main 
-    .divider
+    .divider:first-of-type
         height: 1px
         width: 50px
-        margin-top: 156px
         background-color: white
-        margin-left: 2.9%
+        position: absolute
+        top: -10px
+        transition: .5s
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-    div:first-of-type
-        margin-bottom: 11px
+    .divider:last-of-type
+        height: 1px
+        width: 50px
+        background-color: white
+        position: absolute
+        bottom: -7px
+        transition: .5s
+        transition-delay: .1s
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-    div:nth-of-type(2)
-        margin-top: 11px
-        margin-bottom: 75px
+.pdf-file:hover > .divider:first-of-type
+    width: 100px
+    transition: .5s
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-    .pdf-file
-        margin-left: 2.9%
+.pdf-file:hover > .divider:last-of-type
+    width: 75px
+    transition: .5s
+    transition-delay: .1s
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-    div:last-of-type 
+
+main > div:last-of-type 
         position: relative
         height: 2em
         display: flex
@@ -112,7 +140,7 @@ main
                 white-space: nowrap
 
 @media (min-width: $tablet)  
-    h1, header > div div p, header ul, header main .divider, main > a:first-of-type, main > .divider
+    h1, header > div div p, header ul, header main .divider, main > a:first-of-type, .pdf-file > .divider
         margin-left: 10.7vw
 
     header > div div p
@@ -127,6 +155,15 @@ main
     main section > ul li img 
         height: 274px
         margin: 0 7px
+
+    .iterational ul li:first-of-type ul
+        transform: translateX(100px)
+
+    .iterational ul li:nth-of-type(2) ul
+        transform: translateX(200px)
+
+    .iterational ul li:nth-of-type(3) ul
+        transform: translateX(-50px)
     
     main section article > p 
         margin-left: 2.9%
@@ -179,13 +216,13 @@ main
                 margin-left: 0
                 width: 70%
 
-        ul
+    .iterational ul
             position: relative
             z-index: -1
             right: 50px
             width: 55%
 
-    main section:nth-of-type(2) 
+    .multidevice 
             flex-direction: row-reverse 
             align-items: center
             margin-bottom: 290px
@@ -201,7 +238,7 @@ main
                 margin-right: 10.7vw
                 margin-bottom: 0
 
-    main section > ul li ul li img 
+    .iterational > ul li ul li img 
         height: 224px
         margin: 0 7px
 

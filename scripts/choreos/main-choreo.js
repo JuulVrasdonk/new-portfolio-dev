@@ -11,7 +11,6 @@ export default function mainChoreo() {
             autoAlpha: 0,
             opacity: 0,
             scale: .9,
-            marker: true
         })
         return tl
     }
@@ -34,22 +33,22 @@ export default function mainChoreo() {
         }
     }
 
-    // function pinnedHeading() {
-    //     if(window.matchMedia("(min-width: 576px)").matches) {
-    //         let tl = gsap.timeline();
-    //         tl.to("h1", {
-    //             y: 110,
-    //             scrollTrigger: {
-    //                 trigger: "h1", 
-    //                 start: "top top+=15%",
-    //                 end: "top top",
-    //                 scrub: .7
-    //             }
-    //         })
-    //         return tl;
-    //     }
+    function pinnedHeading() {
+        if(window.matchMedia("(min-width: 576px)").matches) {
+            let tl = gsap.timeline();
+            tl.to("h1", {
+                y: 50,
+                scrollTrigger: {
+                    trigger: "h1", 
+                    start: "top top+=15%",
+                    end: "top top",
+                    scrub: .7
+                }
+            })
+            return tl;
+        }
         
-    // }
+    }
 
     function navAppearance() {
         let tl = gsap.timeline()
@@ -62,22 +61,21 @@ export default function mainChoreo() {
         return tl
     }
 
-    function scrollAnimation() {
-        if(window.matchMedia("(min-width: 576px)").matches) {
-            let tl = gsap.timeline();
-            tl.to("header > div",{
-                y: -110,
-                opacity: 0,
-                scrollTrigger: {
-                    trigger: "h1", 
-                    start: "top top+=15%",
-                    end: "top top",
-                    scrub: .2
-                }
-            })
-            return tl;
-        }
+    
+    if(window.matchMedia("(min-width: 576px)").matches) {
+        gsap.to("header > div",{
+            y: -110,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: "h1", 
+                start: "top top+=25%",
+                end: "top top",
+                scrub: .2
+            }
+        })
     }
+        
+ 
 
     // ************ SEL WORK ************//
 
@@ -94,14 +92,13 @@ export default function mainChoreo() {
         ease: "power4.out",
         autoAlpha: 0,
         opacity: 0,
-        scale: .9,
-        marker: true
+        scale: .9
     })
 
     let ubicompTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".ubicomp h3 .wrapping-paper",
-            start: "top center"
+            start: "top center+=20%"
          }
     })
     ubicompTl.from(".ubicomp h3 .wrapping-paper", {
@@ -122,7 +119,7 @@ export default function mainChoreo() {
     let eurouteTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".euroute h3 .wrapping-paper",
-            start: "top center"
+            start: "top center+=20%"
          }
     })
 
@@ -145,7 +142,7 @@ export default function mainChoreo() {
     let fedTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".FED h3 .wrapping-paper",
-            start: "top center",
+            start: "top center+=20%",
          }
     })
 
@@ -167,7 +164,7 @@ export default function mainChoreo() {
     let buurTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".Buur h3 .wrapping-paper",
-            start: "top center",
+            start: "top center+=20%",
          }
     })
 
@@ -190,11 +187,10 @@ export default function mainChoreo() {
 
 
     let master = gsap.timeline({
-        delay: 2
+        delay: .7
     })
+        .add(navAppearance())  
         .add(headingAnimation())
         .add(imageAnimation())
-        .add(scrollAnimation())
-        .add(navAppearance(), "-=0.5")
-        // .add(pinnedHeading())
+        .add(pinnedHeading())
 }

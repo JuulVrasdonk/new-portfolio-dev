@@ -121,7 +121,6 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  cursor: none;
 }
 
 body {
@@ -349,15 +348,11 @@ ul {
   top: 0;
   bottom: 0;
   z-index: 1000;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
   background-color: white;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
-  -webkit-transition-delay: .6s;
-          transition-delay: .6s;
-  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-          transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
   -webkit-transform: scaleY(0);
@@ -367,8 +362,6 @@ ul {
 .transition-swipe-1.is-active {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
-  border-top-left-radius: 0%;
-  border-top-right-radius: 0%;
 }
 
 .transition-swipe-2 {
@@ -383,23 +376,17 @@ ul {
   pointer-events: none;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
-  -webkit-transition-delay: .6s;
-          transition-delay: .6s;
-  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
-          transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -webkit-transform-origin: top;
           transform-origin: top;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
 }
 
 .transition-swipe-2.is-active {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
 }
 
 header {
@@ -847,7 +834,7 @@ footer > div:last-of-type p:last-of-type {
   z-index: 1;
 }
 
-.about-me header h1 span {
+.about-me header h1 span:first-of-type {
   font-size: clamp(56px, 8vw, 100px);
   font-family: AndersonGroteskUltrabold;
   margin-right: 80%;
@@ -922,9 +909,178 @@ footer > div:last-of-type p:last-of-type {
   }
 }
 
+.ubicomp header h1 {
+  margin-top: 95px;
+  margin-bottom: 25px;
+}
+
+.ubicomp header h1 span {
+  font-size: clamp(56px, 8vw, 100px);
+}
+
+.ubicomp header div > p {
+  margin-bottom: 96px;
+}
+
+.ubicomp header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 76%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.ubicomp header ul li {
+  width: 45%;
+}
+
+.ubicomp header ul li:nth-of-type(2), .ubicomp header ul li:nth-of-type(4) {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.ubicomp header ul li:first-of-type, .ubicomp header ul li:nth-of-type(2) {
+  margin-bottom: 32px;
+}
+
+.ubicomp main {
+  margin: 0 2.9%;
+}
+
+.ubicomp main .pdf-file {
+  font-family: AndersonGroteskUltrabold;
+  position: relative;
+}
+
+.ubicomp main .pdf-file .divider:first-of-type {
+  height: 1px;
+  width: 50px;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ubicomp main .pdf-file .divider:last-of-type {
+  height: 1px;
+  width: 50px;
+  background-color: white;
+  position: absolute;
+  bottom: -7px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ubicomp main .pdf-file:hover > .divider:first-of-type {
+  width: 100px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ubicomp main .pdf-file:hover > .divider:last-of-type {
+  width: 75px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ubicomp main > div:first-of-type {
+  margin-bottom: 11px;
+}
+
+.ubicomp main > div:nth-of-type(2) {
+  margin-top: 11px;
+  margin-bottom: 75px;
+}
+
+.ubicomp main > div:last-of-type {
+  position: relative;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50vh 0 25vh 0;
+}
+
+.ubicomp main > div:last-of-type a {
+  padding: 7.5em;
+}
+
+.ubicomp main > div:last-of-type a span {
+  white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+  .ubicomp h1, .ubicomp header div > p, .ubicomp header ul, .ubicomp main .divider, .ubicomp main > a:first-of-type {
+    margin-left: 10.7vw;
+  }
+  .ubicomp header div > p {
+    width: 60%;
+  }
+  .ubicomp main {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ubicomp header > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 80vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ubicomp header > div div {
+    width: 55%;
+  }
+  .ubicomp header > div ul {
+    margin: 0;
+    padding-top: 130px;
+    width: 40%;
+    height: 40%;
+  }
+  .ubicomp header > div ul li {
+    width: 50%;
+  }
+  .ubicomp header > div ul li:first-of-type, .ubicomp header > div ul li:nth-of-type(2) {
+    margin-bottom: 0;
+  }
+  .ubicomp main > div:first-of-type {
+    margin-top: 75px;
+  }
+}
+
 .euroute header div h1 {
   margin-top: 95px;
   margin-bottom: 25px;
+}
+
+.euroute header div h1 span {
   font-size: clamp(56px, 8vw, 100px);
 }
 
@@ -982,31 +1138,45 @@ footer > div:last-of-type p:last-of-type {
   margin-bottom: 106px;
 }
 
-.euroute main section > ul {
+.euroute .iterational > ul {
   overflow: hidden;
 }
 
-.euroute main section > ul li ul {
+.euroute .iterational > ul li ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 14px;
 }
 
-.euroute main section > ul li ul li img {
+.euroute .iterational > ul li ul li img {
   height: 156px;
   margin: 0 7px;
 }
 
-.euroute main section > ul > li:last-of-type > ul {
-  margin-bottom: 73px;
+.euroute .iterational ul li:first-of-type ul {
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
+}
+
+.euroute .iterational ul li:nth-of-type(2) ul {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.euroute .iterational ul li:nth-of-type(3) ul {
+  -webkit-transform: translateX(-150px);
+          transform: translateX(-150px);
 }
 
 .euroute main section article > h2 {
   margin-left: 2.9%;
   width: 8.5em;
   margin-bottom: 17px;
-  font-size: clamp(28px, 5.71vw, 72px);
+}
+
+.euroute main section article > h2 span {
+  font-size: clamp(28px, 5.71vw, 48px);
 }
 
 .euroute main section article > p {
@@ -1014,7 +1184,7 @@ footer > div:last-of-type p:last-of-type {
   width: 80%;
 }
 
-.euroute main section:nth-of-type(2) {
+.euroute .multidevice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1028,33 +1198,62 @@ footer > div:last-of-type p:last-of-type {
   margin-top: 158px;
 }
 
-.euroute main section:nth-of-type(2) .responsive-anim {
+.euroute .multidevice .responsive-anim {
   width: 80%;
   margin-bottom: 66px;
 }
 
-.euroute main .divider {
+.euroute .pdf-file {
+  font-family: AndersonGroteskUltrabold;
+  position: relative;
+  margin-top: 300px;
+}
+
+.euroute .pdf-file .divider:first-of-type {
   height: 1px;
   width: 50px;
-  margin-top: 156px;
   background-color: white;
-  margin-left: 2.9%;
+  position: absolute;
+  top: -10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute main div:first-of-type {
-  margin-bottom: 11px;
+.euroute .pdf-file .divider:last-of-type {
+  height: 1px;
+  width: 50px;
+  background-color: white;
+  position: absolute;
+  bottom: -7px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute main div:nth-of-type(2) {
-  margin-top: 11px;
-  margin-bottom: 75px;
+.euroute .pdf-file:hover > .divider:first-of-type {
+  width: 100px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute main .pdf-file {
-  margin-left: 2.9%;
+.euroute .pdf-file:hover > .divider:last-of-type {
+  width: 75px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute main div:last-of-type {
+.euroute main > div:last-of-type {
   position: relative;
   height: 2em;
   display: -webkit-box;
@@ -1069,16 +1268,16 @@ footer > div:last-of-type p:last-of-type {
   padding: 50vh 0 25vh 0;
 }
 
-.euroute main div:last-of-type a {
+.euroute main > div:last-of-type a {
   padding: 7.5em;
 }
 
-.euroute main div:last-of-type a span {
+.euroute main > div:last-of-type a span {
   white-space: nowrap;
 }
 
 @media (min-width: 576px) {
-  .euroute h1, .euroute header > div div p, .euroute header ul, .euroute header main .divider, .euroute main > a:first-of-type, .euroute main > .divider {
+  .euroute h1, .euroute header > div div p, .euroute header ul, .euroute header main .divider, .euroute main > a:first-of-type, .euroute .pdf-file > .divider {
     margin-left: 10.7vw;
   }
   .euroute header > div div p {
@@ -1093,6 +1292,18 @@ footer > div:last-of-type p:last-of-type {
   .euroute main section > ul li img {
     height: 274px;
     margin: 0 7px;
+  }
+  .euroute .iterational ul li:first-of-type ul {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  .euroute .iterational ul li:nth-of-type(2) ul {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  .euroute .iterational ul li:nth-of-type(3) ul {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   .euroute main section article > p {
     margin-left: 2.9%;
@@ -1160,13 +1371,13 @@ footer > div:last-of-type p:last-of-type {
     margin-left: 0;
     width: 70%;
   }
-  .euroute main section ul {
+  .euroute .iterational ul {
     position: relative;
     z-index: -1;
     right: 50px;
     width: 55%;
   }
-  .euroute main section:nth-of-type(2) {
+  .euroute .multidevice {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1176,18 +1387,18 @@ footer > div:last-of-type p:last-of-type {
             align-items: center;
     margin-bottom: 290px;
   }
-  .euroute main section:nth-of-type(2) article {
+  .euroute .multidevice article {
     width: 60%;
   }
-  .euroute main section:nth-of-type(2) article p {
+  .euroute .multidevice article p {
     width: 60%;
   }
-  .euroute main section:nth-of-type(2) .responsive-anim {
+  .euroute .multidevice .responsive-anim {
     width: 30%;
     margin-right: 10.7vw;
     margin-bottom: 0;
   }
-  .euroute main section > ul li ul li img {
+  .euroute .iterational > ul li ul li img {
     height: 224px;
     margin: 0 7px;
   }

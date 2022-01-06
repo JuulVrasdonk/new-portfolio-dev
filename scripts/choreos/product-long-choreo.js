@@ -1,0 +1,149 @@
+export default function productLongChoreo() {
+    function headingAnimation() {
+        let tl = gsap.timeline();
+        tl.from("h1 .wrapping-paper", {
+            duration: .8,
+            y: -120,
+            stagger: .2,
+            ease: "power4.out",
+            autoAlpha: 0,
+            opacity: 0,
+            scale: .9,
+        })
+        return tl
+    }
+    function introTextAnimation() {
+        let tl = gsap.timeline();
+        tl.from("header > div div:first-of-type p", {
+            duration: 2,
+            ease: "power4.out",
+            opacity: 0
+        })
+        return tl;
+    }
+
+    function projectStatsAnimation() {
+        let tl = gsap.timeline();
+
+        tl.from("header > div ul li", {
+            duration: 2,
+            ease: "power4.out",
+            opacity: 0,
+            stagger: .2
+        })
+        return tl;
+    }
+
+    function IterationalTl() {
+        function textAppearance() {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "main section:first-of-type article",
+                    start: "center-=15% center",
+                    // markers: true
+                }
+            });
+            tl.from("main section:first-of-type article h2 .wrapping-paper", {
+                duration: .8,
+                y: -120,
+                stagger: .2,
+                ease: "power4.out",
+                autoAlpha: 0,
+                opacity: 0,
+                scale: .9
+            })
+            tl.from("main section:first-of-type article p", {
+                duration: 2,
+                ease: "power4.out",
+                opacity: 0
+            }, "-=0.5")
+        }
+
+        function pinnedSection() {
+            if(window.matchMedia("(min-width: 576px)").matches) {
+                let desktopTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "main section:first-of-type",
+                        start: "center center",
+                        end: "bottom+=100% top",
+                        pin: true,
+                        // markers: true
+                    }
+                });
+                return desktopTl;
+            } else {
+                let mobileTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "main section:first-of-type",
+                        start: "center-=15% center",
+                        end: "bottom+=100% top",
+                        pin: true,
+                        // markers: true
+                    }
+                })
+                return mobileTl;
+            }
+        }
+
+        function imageSlider() {
+            if(window.matchMedia("(min-width: 576px)").matches) {
+                let desktopTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "main section:first-of-type",
+                        start: "center center",
+                        end: "bottom+=100% top",
+                        scrub: 1,
+                        // markers: true
+                    }
+                })
+                desktopTl.from("main section:first-of-type ul li:first-of-type ul", {
+                    x: 750
+                })
+                desktopTl.from("main section:first-of-type ul li:nth-of-type(2) ul", {
+                    x: -800
+                },"<")
+                desktopTl.from("main section:first-of-type ul li:last-of-type ul", {
+                    x: 2000
+                },"<")
+
+                return desktopTl
+            } else {
+                let mobileTl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: "main section:first-of-type",
+                        start: "center-=15% center",
+                        end: "bottom+=100% top",
+                        scrub: 1,
+                        // markers: true
+                    }
+                })
+                mobileTl.from("main section:first-of-type ul li:first-of-type ul", {
+                    x: 750
+                })
+                mobileTl.from("main section:first-of-type ul li:nth-of-type(2) ul", {
+                    x: -800
+                },"<")
+                mobileTl.from("main section:first-of-type ul li:last-of-type ul", {
+                    x: 1000
+                },"<")
+
+                return mobileTl
+            }
+        }   
+
+        let tl = gsap.timeline()
+            .add(textAppearance())
+            .add(pinnedSection())
+            .add(imageSlider())
+
+        return tl
+    }
+
+    let master = gsap.timeline({
+        delay: .7
+    }) 
+        .add(headingAnimation())
+        .add(introTextAnimation(), "-=0.5")
+        .add(projectStatsAnimation(), "-=2")
+        .add(IterationalTl())
+}
