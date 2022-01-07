@@ -34,7 +34,7 @@ export default function productLongChoreo() {
         return tl;
     }
 
-    function IterationalTl() {
+    function iterationalTl() {
         function textAppearance() {
             let tl = gsap.timeline({
                 scrollTrigger: {
@@ -59,11 +59,11 @@ export default function productLongChoreo() {
             }, "-=0.5")
         }
 
-        function pinnedSection() {
+        function pinnedIterationSection() {
             if(window.matchMedia("(min-width: 576px)").matches) {
                 let desktopTl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: "main section:first-of-type",
+                        trigger: "main .iterational",
                         start: "center center",
                         end: "bottom+=100% top",
                         pin: true,
@@ -74,7 +74,7 @@ export default function productLongChoreo() {
             } else {
                 let mobileTl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: "main section:first-of-type",
+                        trigger: "main .iterational",
                         start: "center-=15% center",
                         end: "bottom+=100% top",
                         pin: true,
@@ -89,42 +89,48 @@ export default function productLongChoreo() {
             if(window.matchMedia("(min-width: 576px)").matches) {
                 let desktopTl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: "main section:first-of-type",
+                        trigger: "main .iterational",
                         start: "center center",
                         end: "bottom+=100% top",
                         scrub: 1,
                         // markers: true
                     }
                 })
-                desktopTl.from("main section:first-of-type ul li:first-of-type ul", {
-                    x: 750
+                desktopTl.from("main .iterational ul li:first-of-type ul", {
+                    x: 750,
+                    ease: "power2.out"
                 })
-                desktopTl.from("main section:first-of-type ul li:nth-of-type(2) ul", {
-                    x: -800
+                desktopTl.from("main .iterational ul li:nth-of-type(2) ul", {
+                    x: -800,
+                    ease: "power2.out"
                 },"<")
-                desktopTl.from("main section:first-of-type ul li:last-of-type ul", {
-                    x: 2000
+                desktopTl.from("main .iterational ul li:last-of-type ul", {
+                    x: 2000,
+                    ease: "power2.out"
                 },"<")
 
                 return desktopTl
             } else {
                 let mobileTl = gsap.timeline({
                     scrollTrigger: {
-                        trigger: "main section:first-of-type",
+                        trigger: "main .iterational",
                         start: "center-=15% center",
                         end: "bottom+=100% top",
                         scrub: 1,
                         // markers: true
                     }
                 })
-                mobileTl.from("main section:first-of-type ul li:first-of-type ul", {
-                    x: 750
+                mobileTl.from("main .iterational ul li:first-of-type ul", {
+                    x: 750,
+                    ease: "power2.out"
                 })
-                mobileTl.from("main section:first-of-type ul li:nth-of-type(2) ul", {
-                    x: -800
+                mobileTl.from("main .iterational ul li:nth-of-type(2) ul", {
+                    x: -800,
+                    ease: "power2.out"
                 },"<")
-                mobileTl.from("main section:first-of-type ul li:last-of-type ul", {
-                    x: 1000
+                mobileTl.from("main .iterational ul li:last-of-type ul", {
+                    x: 1000,
+                    ease: "power2.out"
                 },"<")
 
                 return mobileTl
@@ -133,10 +139,55 @@ export default function productLongChoreo() {
 
         let tl = gsap.timeline()
             .add(textAppearance())
-            .add(pinnedSection())
+            .add(pinnedIterationSection())
             .add(imageSlider())
 
         return tl
+    }
+
+    function multideviceTl() {
+        function textAppearance() {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "main .multidevice article",
+                    start: "center-=15% center"
+                }
+            });
+            tl.from("main .multidevice article h2 .wrapping-paper", {
+                duration: .8,
+                y: -120,
+                stagger: .2,
+                ease: "power4.out",
+                autoAlpha: 0,
+                opacity: 0,
+                scale: .9
+            })
+            tl.from("main .multidevice article p", {
+                duration: 2,
+                ease: "power4.out",
+                opacity: 0
+            }, "-=0.5")
+        }
+
+        let tl = gsap.timeline()
+            .add(textAppearance())
+        return tl
+    }
+
+    function lottieApearance() {
+        if(window.matchMedia("(min-width: 576px)").matches) {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "main .multidevice article",
+                    start: "center-=15% bottom",
+                    scrub: 1
+                }
+            });
+            tl.from("main .multidevice .responsive-anim", {
+                x: 900,
+                ease: "power1.out"
+            })
+        }
     }
 
     let master = gsap.timeline({
@@ -145,5 +196,7 @@ export default function productLongChoreo() {
         .add(headingAnimation())
         .add(introTextAnimation(), "-=0.5")
         .add(projectStatsAnimation(), "-=2")
-        .add(IterationalTl())
+        .add(iterationalTl())
+        .add(multideviceTl())
+        .add(lottieApearance())
 }

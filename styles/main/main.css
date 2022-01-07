@@ -1187,6 +1187,9 @@ footer > div:last-of-type p:last-of-type {
 }
 
 .euroute .multidevice {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1197,18 +1200,19 @@ footer > div:last-of-type p:last-of-type {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 158px;
+  margin-top: 258px;
+  margin-bottom: 640px;
 }
 
 .euroute .multidevice .responsive-anim {
-  width: 80%;
+  width: 94.2%;
   margin-bottom: 66px;
 }
 
 .euroute .pdf-file {
   font-family: AndersonGroteskUltrabold;
   position: relative;
-  margin-top: 300px;
+  margin-left: 2.9%;
 }
 
 .euroute .pdf-file .divider:first-of-type {
@@ -1216,7 +1220,7 @@ footer > div:last-of-type p:last-of-type {
   width: 50px;
   background-color: white;
   position: absolute;
-  top: -10px;
+  top: -9px;
   left: 0;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1382,6 +1386,7 @@ footer > div:last-of-type p:last-of-type {
     width: 55%;
   }
   .euroute .multidevice {
+    top: 258px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -1389,16 +1394,16 @@ footer > div:last-of-type p:last-of-type {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 290px;
+    margin-bottom: 890px;
   }
   .euroute .multidevice article {
-    width: 60%;
+    width: 50%;
   }
   .euroute .multidevice article p {
-    width: 60%;
+    width: 80%;
   }
   .euroute .multidevice .responsive-anim {
-    width: 30%;
+    width: 50%;
     margin-right: 10.7vw;
     margin-bottom: 0;
   }
