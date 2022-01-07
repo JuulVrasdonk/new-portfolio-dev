@@ -963,6 +963,7 @@ footer > div:last-of-type p:last-of-type {
   background-color: white;
   position: absolute;
   top: -10px;
+  left: 0;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -975,6 +976,7 @@ footer > div:last-of-type p:last-of-type {
   background-color: white;
   position: absolute;
   bottom: -7px;
+  left: 0;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transition-delay: .1s;
@@ -1034,7 +1036,7 @@ footer > div:last-of-type p:last-of-type {
 }
 
 @media (min-width: 576px) {
-  .ubicomp h1, .ubicomp header div > p, .ubicomp header ul, .ubicomp main .divider, .ubicomp main > a:first-of-type {
+  .ubicomp h1, .ubicomp header div > p, .ubicomp header ul, .ubicomp main > a:first-of-type {
     margin-left: 10.7vw;
   }
   .ubicomp header div > p {
@@ -1215,6 +1217,7 @@ footer > div:last-of-type p:last-of-type {
   background-color: white;
   position: absolute;
   top: -10px;
+  left: 0;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1227,6 +1230,7 @@ footer > div:last-of-type p:last-of-type {
   background-color: white;
   position: absolute;
   bottom: -7px;
+  left: 0;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transition-delay: .1s;
@@ -1277,7 +1281,7 @@ footer > div:last-of-type p:last-of-type {
 }
 
 @media (min-width: 576px) {
-  .euroute h1, .euroute header > div div p, .euroute header ul, .euroute header main .divider, .euroute main > a:first-of-type, .euroute .pdf-file > .divider {
+  .euroute h1, .euroute header > div div p, .euroute header ul, .euroute header main .divider, .euroute main > a:first-of-type {
     margin-left: 10.7vw;
   }
   .euroute header > div div p {
