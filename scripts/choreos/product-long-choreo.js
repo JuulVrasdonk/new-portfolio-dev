@@ -191,7 +191,7 @@ export default function productLongChoreo() {
     }
 
     let master = gsap.timeline({
-        delay: .7
+        delay: 1
     }) 
         .add(headingAnimation())
         .add(introTextAnimation(), "-=0.5")

@@ -91,7 +91,7 @@ export default function aboutMeChoreo() {
         delay: .7
     })
         .add(navAppearance())
-        .add(headingAnimation())
+        .add(headingAnimation(),"<")
         .add(imageAnimation(), "-=1")  
         .add(pinnedHeading())
 }

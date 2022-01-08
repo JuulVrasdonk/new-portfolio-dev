@@ -190,7 +190,7 @@ export default function mainChoreo() {
         delay: .7
     })
         .add(navAppearance())  
-        .add(headingAnimation())
+        .add(headingAnimation(),"<")
         .add(imageAnimation())
         .add(pinnedHeading())
 }

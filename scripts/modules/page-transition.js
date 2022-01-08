@@ -2,7 +2,6 @@ export default function pageTransition() {
     window.onload = () => {
         const transitionElement = document.querySelector('.transition');
         const anchors = document.querySelectorAll('a:not(.internal-link)');
-        console.log(anchors);
     
         setTimeout(() => {
             transitionElement.classList.remove('is-active');
