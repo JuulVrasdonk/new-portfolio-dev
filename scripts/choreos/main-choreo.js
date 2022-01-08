@@ -161,14 +161,14 @@ export default function mainChoreo() {
         opacity: 0
     }, "-=0.5")
 
-    let buurTl = gsap.timeline({
+    let frontendAppsTl = gsap.timeline({
         scrollTrigger: {
-            trigger: ".Buur h3 .wrapping-paper",
+            trigger: ".Frontend-apps h3 .wrapping-paper",
             start: "top center+=20%",
          }
     })
 
-    buurTl.from(".Buur h3 .wrapping-paper", {
+    frontendAppsTl.from(".Frontend-apps h3 .wrapping-paper", {
         duration: .8,
         y: -120,
         stagger: .2,
@@ -177,7 +177,7 @@ export default function mainChoreo() {
         opacity: 0,
         scale: .9,
     })
-    .from(".Buur  ul, .Buur p", {
+    .from(".Frontend-apps  ul, .Buur p", {
         duration: 2,
         ease: "power4.out",
         opacity: 0
