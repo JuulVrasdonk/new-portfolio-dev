@@ -34,13 +34,25 @@ export default function productLongChoreo() {
         return tl;
     }
 
+    if(window.matchMedia("(min-width: 576px)").matches) {
+        gsap.to(".scroll",{
+            y: -110,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: "h1", 
+                start: "top top+=25%",
+                end: "top top",
+                scrub: .2
+            }
+        })
+    }
+
     function iterationalTl() {
         function textAppearance() {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "main section:first-of-type article",
-                    start: "center-=15% center",
-                    // markers: true
+                    start: "center-=20% center"
                 }
             });
             tl.from("main section:first-of-type article h2 .wrapping-paper", {
@@ -98,15 +110,15 @@ export default function productLongChoreo() {
                 })
                 desktopTl.from("main .iterational ul li:first-of-type ul", {
                     x: 750,
-                    ease: "power2.out"
+                    ease: "power2.InOut"
                 })
                 desktopTl.from("main .iterational ul li:nth-of-type(2) ul", {
                     x: -800,
-                    ease: "power2.out"
+                    ease: "power2.InOut"
                 },"<")
                 desktopTl.from("main .iterational ul li:last-of-type ul", {
                     x: 2000,
-                    ease: "power2.out"
+                    ease: "power2.InOut"
                 },"<")
 
                 return desktopTl
@@ -122,15 +134,15 @@ export default function productLongChoreo() {
                 })
                 mobileTl.from("main .iterational ul li:first-of-type ul", {
                     x: 750,
-                    ease: "power2.out"
+                    ease: "power2.InOut"
                 })
                 mobileTl.from("main .iterational ul li:nth-of-type(2) ul", {
                     x: -800,
-                    ease: "power2.out"
+                    ease: "power2.InOut"
                 },"<")
                 mobileTl.from("main .iterational ul li:last-of-type ul", {
                     x: 1000,
-                    ease: "power2.out"
+                    ease: "power2.InOut"
                 },"<")
 
                 return mobileTl
@@ -184,7 +196,7 @@ export default function productLongChoreo() {
                 }
             });
             tl.from("main .multidevice .responsive-anim", {
-                x: 900,
+                opacity: 0,
                 ease: "power1.out"
             })
         }

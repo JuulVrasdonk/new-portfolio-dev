@@ -45,6 +45,38 @@ header > .divider
     background-color: white
     margin-bottom: 106px
 
+header .scroll
+    display: flex
+    align-items: center
+    margin-left: 5px
+
+    p
+        font-size: 18px
+        margin-left: 9px
+        padding-top: 3px
+
+.scroll-cta-animated
+    animation: rec-circle 3s infinite cubic-bezier(0.075, 0.820, 0.165, 1.000)
+
+.scroll-cta-background
+    fill: white
+    opacity: .3
+
+@keyframes rec-circle
+    0% 
+        height: 33%
+        opacity: 1
+
+    50%
+        height: 100%
+        transform: translateY(0px)
+        
+
+    100%
+        height: 10px
+        transform: translateY(70px)
+        opacity: 1
+
 .iterational > ul
     overflow: hidden
 
@@ -93,7 +125,7 @@ main section article > p
     width: 94.2%  
     margin-bottom: 66px
 
-.pdf-file
+.open-file
     font-family: AndersonGroteskUltrabold
     position: relative
     margin-left: 2.9%
@@ -119,12 +151,12 @@ main section article > p
         transition-delay: .1s
         transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-.pdf-file:hover > .divider:first-of-type
+.open-file:hover > .divider:first-of-type
     width: 100px
     transition: .5s
     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
 
-.pdf-file:hover > .divider:last-of-type
+.open-file:hover > .divider:last-of-type
     width: 75px
     transition: .5s
     transition-delay: .1s
@@ -152,8 +184,13 @@ main > div:last-of-type
     header > div div p
         width: 60%
         
-    header > div:last-of-type
-        opacity: 0
+    .scroll
+        display: flex
+        justify-content: center
+        margin: 0
+        width: 10.7vw
+        position: relative
+        top: -100px
 
     main
         margin: 0

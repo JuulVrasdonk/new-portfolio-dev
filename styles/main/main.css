@@ -659,7 +659,7 @@ footer > div:last-of-type p:last-of-type {
   font-size: clamp(56px, 8vw, 100px);
 }
 
-.home header > div {
+.home .scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -669,7 +669,7 @@ footer > div:last-of-type p:last-of-type {
   margin: 33px 0 53px 5px;
 }
 
-.home header > div p {
+.home .scroll p {
   font-size: 18px;
   margin-left: 9px;
   padding-top: 3px;
@@ -815,7 +815,7 @@ footer > div:last-of-type p:last-of-type {
   .home h1 span {
     font-size: 100px;
   }
-  .home header div {
+  .home .scroll {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -951,20 +951,20 @@ footer > div:last-of-type p:last-of-type {
   }
 }
 
-.ubicomp header h1 {
+.ubicomp header h1, .FED header h1, .frontend-apps header h1 {
   margin-top: 95px;
   margin-bottom: 25px;
 }
 
-.ubicomp header h1 span {
+.ubicomp header h1 span, .FED header h1 span, .frontend-apps header h1 span {
   font-size: clamp(56px, 8vw, 100px);
 }
 
-.ubicomp header div > p {
+.ubicomp header div > p, .FED header div > p, .frontend-apps header div > p {
   margin-bottom: 96px;
 }
 
-.ubicomp header ul {
+.ubicomp header ul, .FED header ul, .frontend-apps header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -977,29 +977,29 @@ footer > div:last-of-type p:last-of-type {
   margin-bottom: 44px;
 }
 
-.ubicomp header ul li {
+.ubicomp header ul li, .FED header ul li, .frontend-apps header ul li {
   width: 45%;
 }
 
-.ubicomp header ul li:nth-of-type(2), .ubicomp header ul li:nth-of-type(4) {
+.ubicomp header ul li:nth-of-type(2), .ubicomp header ul li:nth-of-type(4), .FED header ul li:nth-of-type(2), .FED header ul li:nth-of-type(4), .frontend-apps header ul li:nth-of-type(2), .frontend-apps header ul li:nth-of-type(4) {
   margin-right: 0;
   margin-left: 0;
 }
 
-.ubicomp header ul li:first-of-type, .ubicomp header ul li:nth-of-type(2) {
+.ubicomp header ul li:first-of-type, .ubicomp header ul li:nth-of-type(2), .FED header ul li:first-of-type, .FED header ul li:nth-of-type(2), .frontend-apps header ul li:first-of-type, .frontend-apps header ul li:nth-of-type(2) {
   margin-bottom: 32px;
 }
 
-.ubicomp main {
+.ubicomp main, .FED main, .frontend-apps main {
   margin: 0 2.9%;
 }
 
-.ubicomp main .pdf-file {
+.ubicomp main .open-file, .FED main .open-file, .frontend-apps main .open-file {
   font-family: AndersonGroteskUltrabold;
   position: relative;
 }
 
-.ubicomp main .pdf-file .divider:first-of-type {
+.ubicomp main .open-file .divider:first-of-type, .FED main .open-file .divider:first-of-type, .frontend-apps main .open-file .divider:first-of-type {
   height: 1px;
   width: 50px;
   background-color: white;
@@ -1012,7 +1012,7 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.ubicomp main .pdf-file .divider:last-of-type {
+.ubicomp main .open-file .divider:last-of-type, .FED main .open-file .divider:last-of-type, .frontend-apps main .open-file .divider:last-of-type {
   height: 1px;
   width: 50px;
   background-color: white;
@@ -1027,7 +1027,7 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.ubicomp main .pdf-file:hover > .divider:first-of-type {
+.ubicomp main .open-file:hover > .divider:first-of-type, .FED main .open-file:hover > .divider:first-of-type, .frontend-apps main .open-file:hover > .divider:first-of-type {
   width: 100px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1035,7 +1035,7 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.ubicomp main .pdf-file:hover > .divider:last-of-type {
+.ubicomp main .open-file:hover > .divider:last-of-type, .FED main .open-file:hover > .divider:last-of-type, .frontend-apps main .open-file:hover > .divider:last-of-type {
   width: 75px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1045,16 +1045,16 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.ubicomp main > div:first-of-type {
+.ubicomp main > div:first-of-type, .FED main > div:first-of-type, .frontend-apps main > div:first-of-type {
   margin-bottom: 11px;
 }
 
-.ubicomp main > div:nth-of-type(2) {
+.ubicomp main > div:nth-of-type(2), .FED main > div:nth-of-type(2), .frontend-apps main > div:nth-of-type(2) {
   margin-top: 11px;
   margin-bottom: 75px;
 }
 
-.ubicomp main > div:last-of-type {
+.ubicomp main > div:last-of-type, .FED main > div:last-of-type, .frontend-apps main > div:last-of-type {
   position: relative;
   height: 2em;
   display: -webkit-box;
@@ -1069,28 +1069,28 @@ footer > div:last-of-type p:last-of-type {
   padding: 50vh 0 25vh 0;
 }
 
-.ubicomp main > div:last-of-type a {
+.ubicomp main > div:last-of-type a, .FED main > div:last-of-type a, .frontend-apps main > div:last-of-type a {
   padding: 7.5em;
 }
 
-.ubicomp main > div:last-of-type a span {
+.ubicomp main > div:last-of-type a span, .FED main > div:last-of-type a span, .frontend-apps main > div:last-of-type a span {
   white-space: nowrap;
 }
 
 @media (min-width: 576px) {
-  .ubicomp h1, .ubicomp header div > p, .ubicomp header ul, .ubicomp main > a:first-of-type {
+  .ubicomp h1, .ubicomp header div > p, .ubicomp header ul, .ubicomp main > a:first-of-type, .FED h1, .FED header div > p, .FED header ul, .FED main > a:first-of-type, .frontend-apps h1, .frontend-apps header div > p, .frontend-apps header ul, .frontend-apps main > a:first-of-type {
     margin-left: 10.7vw;
   }
-  .ubicomp header div > p {
+  .ubicomp header div > p, .FED header div > p, .frontend-apps header div > p {
     width: 60%;
   }
-  .ubicomp main {
+  .ubicomp main, .FED main, .frontend-apps main {
     margin: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .ubicomp header > div {
+  .ubicomp header > div, .FED header > div, .frontend-apps header > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1099,22 +1099,22 @@ footer > div:last-of-type p:last-of-type {
         -ms-flex-align: center;
             align-items: center;
   }
-  .ubicomp header > div div {
+  .ubicomp header > div div, .FED header > div div, .frontend-apps header > div div {
     width: 55%;
   }
-  .ubicomp header > div ul {
+  .ubicomp header > div ul, .FED header > div ul, .frontend-apps header > div ul {
     margin: 0;
     padding-top: 130px;
     width: 40%;
     height: 40%;
   }
-  .ubicomp header > div ul li {
+  .ubicomp header > div ul li, .FED header > div ul li, .frontend-apps header > div ul li {
     width: 50%;
   }
-  .ubicomp header > div ul li:first-of-type, .ubicomp header > div ul li:nth-of-type(2) {
+  .ubicomp header > div ul li:first-of-type, .ubicomp header > div ul li:nth-of-type(2), .FED header > div ul li:first-of-type, .FED header > div ul li:nth-of-type(2), .frontend-apps header > div ul li:first-of-type, .frontend-apps header > div ul li:nth-of-type(2) {
     margin-bottom: 0;
   }
-  .ubicomp main > div:first-of-type {
+  .ubicomp main > div:first-of-type, .FED main > div:first-of-type, .frontend-apps main > div:first-of-type {
     margin-top: 75px;
   }
 }
@@ -1180,6 +1180,50 @@ footer > div:last-of-type p:last-of-type {
   width: 50px;
   background-color: white;
   margin-bottom: 106px;
+}
+
+.euroute header .scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5px;
+}
+
+.euroute header .scroll p {
+  font-size: 18px;
+  margin-left: 9px;
+  padding-top: 3px;
+}
+
+.euroute .scroll-cta-animated {
+  -webkit-animation: rec-circle 3s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+          animation: rec-circle 3s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.euroute .scroll-cta-background {
+  fill: white;
+  opacity: .3;
+}
+
+@keyframes rec-circle {
+  0% {
+    height: 33%;
+    opacity: 1;
+  }
+  50% {
+    height: 100%;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    height: 10px;
+    -webkit-transform: translateY(70px);
+            transform: translateY(70px);
+    opacity: 1;
+  }
 }
 
 .euroute .iterational > ul {
@@ -1251,13 +1295,13 @@ footer > div:last-of-type p:last-of-type {
   margin-bottom: 66px;
 }
 
-.euroute .pdf-file {
+.euroute .open-file {
   font-family: AndersonGroteskUltrabold;
   position: relative;
   margin-left: 2.9%;
 }
 
-.euroute .pdf-file .divider:first-of-type {
+.euroute .open-file .divider:first-of-type {
   height: 1px;
   width: 50px;
   background-color: white;
@@ -1270,7 +1314,7 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute .pdf-file .divider:last-of-type {
+.euroute .open-file .divider:last-of-type {
   height: 1px;
   width: 50px;
   background-color: white;
@@ -1285,7 +1329,7 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute .pdf-file:hover > .divider:first-of-type {
+.euroute .open-file:hover > .divider:first-of-type {
   width: 100px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1293,7 +1337,7 @@ footer > div:last-of-type p:last-of-type {
           transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.euroute .pdf-file:hover > .divider:last-of-type {
+.euroute .open-file:hover > .divider:last-of-type {
   width: 75px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -1333,8 +1377,17 @@ footer > div:last-of-type p:last-of-type {
   .euroute header > div div p {
     width: 60%;
   }
-  .euroute header > div:last-of-type {
-    opacity: 0;
+  .euroute .scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    width: 10.7vw;
+    position: relative;
+    top: -100px;
   }
   .euroute main {
     margin: 0;

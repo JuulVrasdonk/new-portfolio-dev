@@ -63,7 +63,7 @@ export default function mainChoreo() {
 
     
     if(window.matchMedia("(min-width: 576px)").matches) {
-        gsap.to("header > div",{
+        gsap.to(".scroll",{
             y: -110,
             opacity: 0,
             scrollTrigger: {
