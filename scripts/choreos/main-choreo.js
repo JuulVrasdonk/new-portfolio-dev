@@ -177,7 +177,7 @@ export default function mainChoreo() {
         opacity: 0,
         scale: .9,
     })
-    .from(".Frontend-apps  ul, .Buur p", {
+    .from(".Frontend-apps  ul, .Frontend-apps p", {
         duration: 2,
         ease: "power4.out",
         opacity: 0
